@@ -47,7 +47,7 @@ public class KernelUtils {
 	public static double[][] testSubset(double[][] kernel, int startIdx, int endIdx) {		
 		double[][] ss = new double[endIdx - startIdx][kernel.length - (endIdx-startIdx)];
 		
-		for (int i = startIdx; i < endIdx; i++) {
+		for (int i = startIdx; i < endIdx - startIdx; i++) {
 			for (int j = 0; j < startIdx; j++) {
 				ss[i][j] = kernel[i][j];
 			}
